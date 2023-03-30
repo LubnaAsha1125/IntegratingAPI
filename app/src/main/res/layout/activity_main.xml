@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#D6E5EA">
+
+    <ImageView
+        android:id="@+id/Clouds"
+        android:layout_width="500dp"
+        android:layout_height="800dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/_938054_removebg_preview"
+        android:alpha="0.20"/>
+
+    <TextView
+        android:id="@+id/Title"
+        android:text="@string/Title"
+        android:textSize="25dp"
+        android:layout_marginTop="45dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/Input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="italic"
+        android:textAllCaps="true"
+        android:textColor="#24586B"/>
+
+    <EditText
+        android:id="@+id/Input"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:hint="enter location"
+        app:layout_constraintTop_toBottomOf="@id/Title"
+        app:layout_constraintBottom_toTopOf="@id/Outputs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/Outputs"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="@id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:background="#CCEAEAEA">
+
+        <TextView
+            android:id="@+id/Country"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Country: "
+            app:layout_constraintBottom_toTopOf="@id/Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/Name"
+            android:textSize="20dp"
+            android:text="Name: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/Condition"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Country"
+            android:layout_marginTop="110dp"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/Condition"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Condition: "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Name"
+            android:layout_marginTop="180dp"
+            android:layout_marginLeft="15dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:text="View Weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Outputs"
+        android:backgroundTint="#24586B"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
